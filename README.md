@@ -6,7 +6,7 @@ Please send me any hints or tips you may have on [Twitter](https://twitter.com/J
 
 Click the dropdown arrows to view contributions from different years.
 
-<details open><summary><b>Click here to view contribitions from 2025</b></summary>
+<details open><summary><b>Click here to view contributions from 2025</b></summary>
 
 ### [2025 week 21](/2025/week_21/) - Dungeons and Dragons Monsters 🏰🐉
 
@@ -16,7 +16,7 @@ Dungeons and Dragons Monster data from System Reference Document v5.2.1
 ----
 </details>
 
-<details><summary><b>Click here to view contribitions from 2022</b></summary>
+<details><summary><b>Click here to view contributions from 2022</b></summary>
    
 ### [2022 week 43](/2022/week_43/) - The Great British Bake Off 🧁
 
@@ -74,7 +74,7 @@ REA data courtesy of transfermarkt via {WorldFootballR}
 ----
 </details>
 
-<details><summary><b>Click here to view contribitions from 2021</b></summary>
+<details><summary><b>Click here to view contributions from 2021</b></summary>
 
 ### [2021 week 52](/2021/week_52/) - Starbucks Coffees ☕️
 
