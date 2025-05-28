@@ -38,7 +38,7 @@ buffer = 3
 teeth_gap = 0.5
 
 offset <- -(max_ability_score + buffer)  # Add a bit of buffer space
-label_buffer <- 1.7  # How far above the base to place labels
+label_buffer <- 1.4  # How far above the base to place labels
 
 # First create the teeth_data 
 teeth_data <- bind_rows(
@@ -123,7 +123,7 @@ labels_data <- bind_rows(
   geom_polygon(fill = "#CEC2AE", colour = "black") +
   geom_text(data = labels_data,
             aes(x = x_num, y = y, label = score, group = NULL),
-            size = 20, colour = "black",
+            size = 17, colour = "black",
             family = "Caudex") +
   facet_wrap(~name, labeller = labeller(name = label_wrap_gen(15))) +
     lims(y = c(-45, 5)) +  
@@ -178,12 +178,12 @@ legend_offset <- -18
               fill="#8D282B",
               color="#8D282B", alpha=0.5) +
     geom_polygon(fill = "#CEC2AE", colour = "black") +
-    lims(y = c(-26, 9),
+    lims(y = c(-26, 15),
          x = c(-1, 8)) +  
     coord_cartesian(clip = "off") +
     geom_textbox(data = tibble(x_num = c(1, 3, 5),
                             label = c("Strength", "Constitution", "Wisdom")),
-              aes(x = x_num, y = 2, label = label, group = NULL),
+              aes(x = x_num, y = 2.5, label = label, group = NULL),
               halign = 0.5,
               width = grid::unit(0.73, "npc"), # 73% of plot panel width
               size = 25,
@@ -195,7 +195,7 @@ legend_offset <- -18
               ) +
     geom_textbox(data = tibble(x_num = c(2, 4, 6),
                                label = c("Dexterity", "Intelligence", "Charisma")),
-                 aes(x = x_num, y = -20.5, label = label, group = NULL),
+                 aes(x = x_num, y = -21, label = label, group = NULL),
                  halign = 0.5,
                  width = grid::unit(0.73, "npc"), 
                  size = 25,
@@ -204,6 +204,10 @@ legend_offset <- -18
                  box.colour = NA,
                  lineheight = 0.3,
                  fill = NA
+    ) +
+    annotate("text", x = 3.5, y = 15, label = "How To Read", color = "#EEEEEE", 
+             size = 40,
+             family = "Caudex"
     ) +
     annotate("text", x = 3.5, y = 9, label = "Size of Upper Teeth = Saving Throw Bonus", color = "#EEEEEE", 
              size = 30,
@@ -214,6 +218,12 @@ legend_offset <- -18
              size = 30,
              family = "Caudex"
              ) +
+    annotate("segment", x = c(2, 4, 6), xend = c(2, 4, 6), y = legend_offset, yend = legend_offset-1,
+             colour = "black"
+    ) +
+    annotate("segment", x = c(1, 3, 5), xend = c(1, 3, 5), y = 0, yend = 1,
+             colour = "black"
+    ) +
     theme_void() +
     theme(
       panel.background = element_rect(fill = "black"),
@@ -226,12 +236,12 @@ legend_offset <- -18
     )
 )
 
-subtitle <- "The top 12 monsters arranged by Challenge Rating (how challenging a monster is for a party of adventurers). Each set of teeth represent the scores for different attributes of individual monsters, which reflect the monster's raw physical and mental traits. The upper teeth show the corresponding saving throw bonuses, which indicate how resistant the monster is to certain effects in combat. These bonuses may include additional proficiency modifiers, depending on the monster's training or role." 
+subtitle <- "The top 12 monsters arranged by Challenge Rating (how challenging a monster is for a party of adventurers). Each set of teeth represents the scores for different attributes of individual monsters. The lower teeth show the base ability scores, which reflect the monster's raw physical and mental traits. The upper teeth show the corresponding saving throw bonuses, which indicate how resistant the monster is to certain effects in combat. These bonuses may include additional proficiency modifiers, depending on the monster's training or role." 
 
 (final_plot <- plot +
   plot_annotation(title = "D&D Monsters",
                   subtitle = str_wrap(subtitle, 78),
-                  caption = "@jamie_bio | source: System Reference Document v5.2.1",
+                  caption = "Jamie Hudson @jamie_bio | source: System Reference Document v5.2.1",
                   theme = theme(plot.title = element_text(size = 275,
                                                           margin = margin(20,0,0,0),
                                                           family = "MedievalSharp",
@@ -242,7 +252,7 @@ subtitle <- "The top 12 monsters arranged by Challenge Rating (how challenging a
                                                              margin = margin(40, 0, 50, 0),
                                                              family = "Caudex",
                                                              colour = "#EEEEEE"),
-                                plot.caption = element_text(size = 50,
+                                plot.caption = element_text(size = 60,
                                                             family = "MedievalSharp",
                                                             colour = "#EEEEEE",
                                                             margin = margin(0, 0, 20, 0)),
@@ -252,7 +262,7 @@ subtitle <- "The top 12 monsters arranged by Challenge Rating (how challenging a
                                 plot.margin = margin(30,30,0,30))) +
   inset_element(teeth_legend, left = 0.625, bottom = 1.05, right = 1.025, top = 1.3, align_to = 'full', clip = T))
 
-ggsave(paste0("d&d_monsters_", format(Sys.time(), "%d%m%Y"), ".png"), 
+ggsave(paste0("~/Downloads/d&d_monsters_", format(Sys.time(), "%d%m%Y"), ".png"), 
        dpi = 320,
        width = 24,
        height = 24)
