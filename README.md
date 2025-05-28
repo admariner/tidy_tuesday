@@ -11,7 +11,7 @@ Click the dropdown arrows to view contributions from different years.
 ### [2025 week 21](/2025/week_21/) - Dungeons and Dragons Monsters 🏰🐉
 
 Dungeons and Dragons Monster data from System Reference Document v5.2.1
-![dnd](/2025/week_21/d&d_monsters_28052025.png)
+![dnd](/2025/week_21/dnd_monsters_28052025.png)
 
 ----
 </details>
