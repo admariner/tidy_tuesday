@@ -147,8 +147,8 @@ legend_offset <- -18
 (teeth_legend <- tibble(
   variable = c("str", "dex", "con", "int", "wis", "cha"),
   x_num = 1:6,
-  top_score = rep(7, 6),  # Example saving throw values
-  bottom_score = rep(7, 6)  # Example ability scores
+  top_score = rep(7, 6),  
+  bottom_score = rep(7, 6)  
 ) %>% 
     bind_rows(
       select(., variable, x_num, score = top_score) %>% 
