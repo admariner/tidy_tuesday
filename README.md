@@ -6,8 +6,18 @@ Please send me any hints or tips you may have on [Twitter](https://twitter.com/J
 
 Click the dropdown arrows to view contributions from different years.
 
-<details open><summary><b>Click here to view contribitions from 2022</b></summary>
+<details open><summary><b>Click here to view contribitions from 2025</b></summary>
 
+### [2025 week 21](/2025/week_21/) - Dungeons and Dragons Monsters 🏰🐉
+
+Dungeons and Dragons Monster data from System Reference Document v5.2.1
+![dnd](/2025/week_21/d&d_monsters_28052025.png)
+
+----
+</details>
+
+<details><summary><b>Click here to view contribitions from 2022</b></summary>
+   
 ### [2022 week 43](/2022/week_43/) - The Great British Bake Off 🧁
 
 Great British Bake Off data from the {bakeoff} R Package
