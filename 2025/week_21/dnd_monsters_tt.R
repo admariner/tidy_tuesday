@@ -236,7 +236,7 @@ legend_offset <- -18
     )
 )
 
-subtitle <- "The top 12 monsters arranged by Challenge Rating (how challenging a monster is for a party of adventurers). Each set of teeth represents the scores for different attributes of individual monsters. The lower teeth show the base ability scores, which reflect the monster's raw physical and mental traits. The upper teeth show the corresponding saving throw bonuses, which indicate how resistant the monster is to certain effects in combat. These bonuses may include additional proficiency modifiers, depending on the monster's training or role." 
+subtitle <- "The top 12 monsters arranged by Challenge Rating (how challenging a monster is for a party of adventurers). Each set of teeth represents the scores for different attributes of individual monsters. The lower teeth show the base Ability Scores, which reflect the monster's raw physical and mental traits. The upper teeth show the corresponding Saving Throw Bonuses, which indicate how resistant the monster is to certain effects in combat. These bonuses may include additional proficiency modifiers, depending on the monster's training or role." 
 
 (final_plot <- plot +
   plot_annotation(title = "D&D Monsters",
